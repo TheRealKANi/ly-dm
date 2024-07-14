@@ -108,12 +108,12 @@ int main(int argc, char** argv)
 
 		if (event.type == TB_EVENT_KEY)
 		{
-			if (event.key == TB_KEY_F1)
+			if (event.key == TB_KEY_F1 || event.key == TB_KEY_CTRL_S) # Ctrl+s to shutdown on a non Fn'ed keyboard
 			{
 				shutdown = SHUTDOWN_YES;
 				break;
 			}
-			else if (event.key == TB_KEY_F2)
+			else if (event.key == TB_KEY_F2 || event.key == TB_KEY_CTRL_R) # Ctrl+r to reboot on a non Fn'ed keyboard
 			{
 				shutdown = SHUTDOWN_REBOOT;
 				break;
